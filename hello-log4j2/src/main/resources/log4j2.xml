@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+    <RollingFile name="RollingFile" fileName="target/rolling.log" filePattern="target/$${date:yyyy-dd-MM-HH-mm-ss}-%i-rolling.log">
+      <PatternLayout>
+        <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+      </PatternLayout>
+      <policies>
+        <SizeBasedTriggeringPolicy size="1 KB"/>
+      </policies>
+    </RollingFile>
+  </Appenders>
+  <Loggers>
+    <Logger name="ch.jamas.hello.log4j4.level" level="trace"/>
+    <Logger name="ch.jamas.hello.log4j2.level.trace" level="trace"/>
+    <Logger name="ch.jamas.hello.log4j2.level.debug" level="debug"/>
+    <Logger name="ch.jamas.hello.log4j2.level.info" level="info"/>
+    <Logger name="ch.jamas.hello.log4j2.level.warn" level="warn"/>
+    <Logger name="ch.jamas.hello.log4j2.level.error" level="error"/>
+    <Logger name="ch.jamas.hello.log4j2.level.fatal" level="fatal"/>
+    <Root level="warn">
+      <AppenderRef ref="Console"/>
+      <AppenderRef ref="RollingFile"/>
+    </Root>
+  </Loggers>
+</Configuration>

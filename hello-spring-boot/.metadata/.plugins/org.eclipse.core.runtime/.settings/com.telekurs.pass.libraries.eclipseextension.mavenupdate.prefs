@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+mvnLauncherExecutable=C\:\\bin\\apache-maven-3.3.9\\bin\\mvn.cmd
+rcpLibJarsGoals=--update-snapshots clean install
+rcpLibSourcesGoals=--update-snapshots clean process-resources
+serverProjectsPattern=onlineserver-.*|ssi-.*|test-.*
+sharedProjectGoal=initialize --update-snapshots dependency\:resolve -Dclassifier\=sources

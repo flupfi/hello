@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+org.eclipse.jdt.debug.ui.active_filters=sun.reflect.*,java.lang.ClassLoader,java.lang.StringBuffer,java.lang.StringBuilder,java.lang.reflect.Method
+org.eclipse.jdt.debug.ui.filter_get=true
+org.eclipse.jdt.debug.ui.filter_setters=true
+org.eclipse.jdt.debug.ui.filter_synthetics=true
+org.eclipse.jdt.debug.ui.inactive_filters=java.*,javax.*,jrockit.*,sun.*

@@ -1,0 +1,203 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>ch.jamas.hello.pom</groupId>
+		<artifactId>master-pom</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../master-pom/pom.xml</relativePath>
+	</parent>
+
+	<groupId>ch.jamas.hello</groupId>
+	<artifactId>hello</artifactId>
+	<name>Hello World</name>
+	<description>A first try</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${h2database.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.h2database/com.springsource.org.h2 -->
+		<!-- dependency>
+		<groupId>com.h2database</groupId>
+		<artifactId>com.springsource.org.h2</artifactId>
+		<version>1.0.71</version>
+	</dependency-->
+	<!-- https://mvnrepository.com/artifact/com.h2database/h2-mvstore -->
+	<!-- dependency>
+	<groupId>com.h2database</groupId>
+	<artifactId>h2-mvstore</artifactId>
+	<version>1.4.193</version>
+</dependency -->
+
+<dependency>
+	<groupId>org.springframework.batch</groupId>
+	<artifactId>spring-batch-core</artifactId>
+	<version>${spring-batch-core.version}</version>
+</dependency>
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-core</artifactId>
+	<version>${spring-core.version}</version>
+</dependency>
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-beans</artifactId>
+	<version>${spring-core.version}</version>
+</dependency>
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-context</artifactId>
+	<version>${spring-core.version}</version>
+</dependency>
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-jdbc</artifactId>
+	<version>${spring-core.version}</version>
+</dependency>
+<dependency>
+	<groupId>org.slf4j</groupId>
+	<artifactId>slf4j-api</artifactId>
+	<version>${slf4j.version}</version>
+</dependency>
+<dependency>
+	<groupId>org.slf4j</groupId>
+	<artifactId>slf4j-log4j12</artifactId>
+	<version>${slf4j.version}</version>
+</dependency>
+<dependency>
+	<groupId>org.slf4j</groupId>
+	<artifactId>slf4j-simple</artifactId>
+	<version>${slf4j.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+<dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>${log4j.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-aop</artifactId>
+	<version>${spring-core.version}</version>
+</dependency>
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-tx</artifactId>
+	<version>${spring-core.version}</version>
+</dependency>
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-context-support</artifactId>
+	<version>${spring-core.version}</version>
+</dependency>
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-orm</artifactId>
+	<version>${spring-core.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-jms -->
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-jms</artifactId>
+	<version>${spring-core.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-aspects -->
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-aspects</artifactId>
+	<version>${spring-core.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework/org.springframework.orm -->
+<!-- dependency>
+<groupId>org.springframework</groupId>
+<artifactId>org.springframework.orm</artifactId>
+<version>3.2.5.RELEASE</version>
+</dependency-->
+<!-- https://mvnrepository.com/artifact/org.springframework/org.springframework.test -->
+<!-- dependency>
+<groupId>org.springframework</groupId>
+<artifactId>org.springframework.test</artifactId>
+<version>3.2.5.RELEASE</version>
+</dependency-->
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-messaging -->
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-messaging</artifactId>
+	<version>${spring-core.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/springframework/spring-mock -->
+<!-- dependency>
+<groupId>springframework</groupId>
+<artifactId>spring-mock</artifactId>
+<version>1.2.6</version>
+</dependency-->
+<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot -->
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot</artifactId>
+	<version>${spring-boot.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+<dependency>
+	<groupId>org.mockito</groupId>
+	<artifactId>mockito-core</artifactId>
+	<version>${mockito-core.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+<dependency>
+	<groupId>org.mockito</groupId>
+	<artifactId>mockito-all</artifactId>
+	<version>${mockito-all.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
+<dependency>
+	<groupId>org.flywaydb</groupId>
+	<artifactId>flyway-core</artifactId>
+	<version>${flyway-core.version}</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-commandline -->
+<dependency>
+	<groupId>org.flywaydb</groupId>
+	<artifactId>flyway-commandline</artifactId>
+	<version>${flyway-core.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>org.quartz-scheduler</groupId>
+	<artifactId>quartz</artifactId>
+	<version>${quartz-scheduler.version}</version>
+</dependency>
+<!--dependency>
+	<groupId>org.quartz-scheduler</groupId>
+	<artifactId>quartz-oracle</artifactId>
+	<version>${quartz-scheduler.version}</version>
+</dependency-->
+<!--dependency>
+	<groupId>org.quartz-scheduler</groupId>
+	<artifactId>quartz-weblogic</artifactId>
+	<version>${quartz-scheduler.version}</version>
+</dependency-->
+<!--dependency>
+	<groupId>org.quartz-scheduler</groupId>
+	<artifactId>quartz-jboss</artifactId>
+	<version>${quartz-scheduler.version}</version>
+</dependency-->
+<dependency>
+    <groupId>org.hamcrest</groupId>
+    <artifactId>hamcrest-all</artifactId>
+    <version>${hamcrest.version}</version>
+</dependency>
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>${junit.version}</version>
+</dependency>
+
+</dependencies>
+</project>

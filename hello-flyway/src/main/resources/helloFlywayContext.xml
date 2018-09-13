@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${db.driver}" />
+		<property name="url" value="${db.url}" />
+		<property name="username" value="${db.user}" />
+		<property name="password" value="${db.password}" />
+	</bean>
+
+
+<!-- bean id="flyway" class="org.flywaydb.core.Flyway" init-method="migrate" -->
+<bean id="flyway" class="org.flywaydb.core.Flyway">
+    <property name="dataSource" ref="dataSource"/>
+</bean>
+
+<!-- The rest of the application (incl. Hibernate) -->
+<!-- Must be run after Flyway to ensure the database is compatible with the code -->
+<!--bean id="sessionFactory" class="..." depends-on="flyway">
+    ...
+</bean-->
+
+</beans>
